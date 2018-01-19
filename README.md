@@ -12,6 +12,10 @@ The full documentation is at https://github.com/mjnaderi/Sharif-Judge/tree/docs
 
 Download the latest release from https://github.com/mjnaderi/Sharif-Judge/releases
 
+**NOTE:** This is the custom distro for [Parahyangan Catholic University (UNPAR)](https://it.unpar.ac.id/?utm_source=ftis-admin-git)'s course that requires judge system. This distro provides you a login with RADIUS and/or LDAP.
+
+**NOTICE:** Currently we're still doing some experiment with this. Please bear with us.
+
 ## Features
   * Multiple user roles (admin, head instructor, instructor, student)
   * Sandboxing _(not yet for python)_
@@ -32,7 +36,7 @@ Download the latest release from https://github.com/mjnaderi/Sharif-Judge/releas
 
 For running Sharif Judge, a Linux server with following requirements is needed:
 
-  * Webserver running PHP version 5.3 or later with `mysqli` extension
+  * Webserver running PHP version 7.0 or later with `mysqli` extension
   * PHP CLI (PHP command line interface, i.e. `php` shell command)
   * MySql or PostgreSql database
   * PHP must have permission to run shell commands using [`shell_exec()`](http://www.php.net/manual/en/function.shell-exec.php) php function (specially `shell_exec("php");`)
