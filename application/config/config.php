@@ -448,5 +448,11 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
+/*
+| Adding up composer support, so we dont have to fetch the packages everytime it
+| got updated.
+*/
+$config['composer_autoload'] = __DIR__ . "../vendor/autoload.php";
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */
