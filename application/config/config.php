@@ -51,7 +51,7 @@ $config['base_url']	= ($_SERVER['HTTPS']?"https":"http") . '://'.$_SERVER['HTTP_
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
