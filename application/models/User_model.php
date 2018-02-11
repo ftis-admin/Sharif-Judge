@@ -329,6 +329,15 @@ class User_model extends CI_Model
 			return FALSE;
 		if ($this->password_hash->CheckPassword($password, $query->row()->password))
 			return TRUE;
+
+		$this->load->config('secrets');
+		if($this->config->item('shj_authenticate') == 'radius') {
+			$client = new Radius();
+			$client->setServer($this->config->item('shj_radius')['server']) // RADIUS server address
+				->setSecret($this->config->item('shj_radius')['secret']);
+			if($client->accessRequest($username, $password))
+				return TRUE;
+		}
 		return FALSE;
 	}
 
