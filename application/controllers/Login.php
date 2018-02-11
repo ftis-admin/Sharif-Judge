@@ -5,7 +5,6 @@
  * @author Mohammad Javad Naderi <mjnaderi@gmail.com>
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-use Dapphp\Radius\Radius;
 
 class Login extends CI_Controller
 {

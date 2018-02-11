@@ -5,6 +5,7 @@
  * @author Mohammad Javad Naderi <mjnaderi@gmail.com>
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
+use Dapphp\Radius\Radius;
 
 class User_model extends CI_Model
 {
@@ -332,7 +333,7 @@ class User_model extends CI_Model
 
 		$this->load->config('secrets');
 		if($this->config->item('shj_authenticate') == 'radius') {
-			$client = new \Radius();
+			$client = new Radius();
 			$client->setServer($this->config->item('shj_radius')['server']) // RADIUS server address
 				->setSecret($this->config->item('shj_radius')['secret']);
 			if($client->accessRequest($username, $password))
